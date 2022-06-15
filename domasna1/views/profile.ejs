@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: skyblue;
+            font-family: verdana;
+            color: #fff;
+            padding: 30px;
+        }
+
+        h1, h2 {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        p, li {
+            font-size: 16px;
+            ;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <% include partials/nav.ejs %> <!--Vnesuvanje na template primer meni napraveno vo poseben template-->
+    <h1>Welcome to the Profile of <%= person %><!--se vnesuva parametar 'person' od js fajlo vo rednero -->
+    </h1>
+    <p><strong>Age: </strong>> <%= data.age %> </p> <!--<%=  %>  so oviaj ta i ednakvo vnatre se vnesuva data -->
+    <p><strong>Job: </strong>> <%= data.job %></p>
+    <h2>Hobiies</h2>
+    <ul>
+        <% data.Hobiies.forEach(function(item){ %> <!--so <%  %>  vnesuva js kod -->
+            <!--Hobies e listata od tutorian25-26// kade gi pominuva site clenoj i kreira lista itemi-->
+            <li><%= item %></li>
+        <% }) %>
+    </ul>
+</body>
+
+</html>

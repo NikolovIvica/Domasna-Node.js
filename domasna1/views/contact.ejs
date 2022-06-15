@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: skyblue;
+            font-family: verdana;
+            color: #fff;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            ;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <% include partials/nav.ejs %>
+    <h1>Contact us</h1>
+    <p> contact the collest </p>
+
+    <p><%= qs.detp %></p>
+    <p>
+        <%= qs.person %>
+    </p>
+
+    <form id="contact-form">
+        <label for="who">who do yuo want to contact</label>
+        <input type="text" name="who" value="<%= qs.person %>"/> <!--da se zemi vrednosta na inputo od linko i da se vnesi vo poleto-->
+        <label for="department">Which department</label>
+        <input type="text" name="department" value="<%= ds.dept %>"/>
+        <label for="email">your email</label>
+        <input type="email" name="email"/>
+        <input type="submit" value="sumbit"/>
+    </form>
+</body>
+
+</html>
