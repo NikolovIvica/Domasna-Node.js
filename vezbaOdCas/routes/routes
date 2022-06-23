@@ -1,0 +1,11 @@
+const express = require("express");
+const router = express.Router();
+const users = require('../users/users');
+
+
+
+router.get('/', (req, res) => {
+    res.render('../views/index', { users: users })
+})
+
+module.exports = router;
