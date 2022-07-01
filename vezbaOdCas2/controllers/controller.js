@@ -1,6 +1,6 @@
 
 
-const users = [{name: 'ivica', lastName: 'niko', email: '12@htomail.com'}];
+const users = [];
 
 module.exports = {
 
